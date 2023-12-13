@@ -1,0 +1,12 @@
+---
+sidebar: false
+---
+
+```{r}
+
+```
+
+| Topic | Slides |
+|-------|--------|
+| Installation | `r htmltools::a(href = "slides/01_installation/01_installation.qmd", htmltools::div(role = "img", list(fontawesome::fa(name = "person-chalkboard")), style = "color: blue"))` |
+| Usage | coming soon |

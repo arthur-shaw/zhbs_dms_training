@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Data management system"
+  search: true
+  navbar:
+    pinned: true
+    background: "#0042c8"
+    # right:
+    #   - text: "Home"
+    #     icon: "house-door-fill"
+    #     file: index.qmd
+    #   - text: "Schedule"
+    #     icon: "calendar-week"
+    #     file: schedule.qmd
+    #   - text: "Course"
+    #     icon: "mortarboard"
+    #     href: course/00_overview.qmd
+    #   - text: "Assignments"
+    #     icon: "journal-code"
+    #     file: assignments/00_overview.qmd
+    #   - text: "Resources"
+    #     icon: "book"
+    #     href: resources.qmd
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

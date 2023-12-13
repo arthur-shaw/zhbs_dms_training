@@ -1,0 +1,314 @@
+---
+format: 
+    revealjs:
+        theme: [default, ../css/core.scss, ../css/colors.scss]
+        height: 900
+        width: 1600
+execute: 
+  eval: false
+  echo: true
+---
+
+```{r}
+#| label: table theme
+#| eval: true
+#| echo: false
+df_theme = reactable::reactableTheme(
+    headerStyle = list(
+        color = "white",
+        background = "var(--s3)"
+    )
+)
+```
+
+# Installation {background-color=var(--suso)}
+
+## Roadmap `r fontawesome::fa(name = "route")` {.suso}
+
+::: {.box .box-1}
+Install dependencies
+:::
+
+::: {.box .box-2}
+Clone repository
+:::
+
+::: {.box .box-3}
+Provide parameters
+:::
+
+
+# Install dependencies {background-color=var(--s1)}
+
+## Overview {.t1}
+
+::: {.box .box-1}
+R
+:::
+
+::: {.box .box-1}
+RTools
+:::
+
+::: {.box .box-1}
+RStudio
+:::
+
+## R {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+![](assets/get_R.mp4){fig-align="center"}
+:::
+
+::: {.column width="30%"}
+
+### Why
+
+Program written in R
+
+### How
+
+- Follow [this link](https://cran.r-project.org/)
+- Click on the appropriate link for your OS
+- Click on `base`
+- Download and install (e.g., [this](https://cran.r-project.org/bin/windows/base/R-4.3.2-win.exe) for `r fontawesome::fa(name = "windows")`)
+
+:::
+
+::::
+
+## RTools {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+![](assets/get_RTools.mp4){fig-align="center"}
+:::
+
+::: {.column width="30%"}
+
+### Why
+
+Required for `r fontawesome::fa(name = "windows")`
+
+### How
+
+- Follow this [link](https://cran.r-project.org/)
+- Click on `Windows`
+- Click on `RTools`
+- Download
+- Install in the default location (e.g., `C:\rtools43` on Windows)
+
+:::
+
+::::
+
+## RStudio {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+![](assets/get_RStudio.mp4){fig-align="center"}
+:::
+
+::: {.column width="30%"}
+
+### Why
+
+Simplest way to interact with R
+
+### How
+
+- Follow [this link](https://posit.co/products/open-source/rstudio/)
+- Click on the `DOWNLOAD RSTUDIO`
+- Click on the appropriate link for your OS
+- Download and install 
+
+:::
+
+::::
+
+# Clone repository {background-color=var(--s2)}
+
+## Clone {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+![](assets/clone_repo.mp4){fig-align="center"}
+:::
+
+::: {.column width="30%"}
+- Click on the `<> Code` button
+- Click on `Download ZIP` to download
+- Unzip
+:::
+
+::::
+
+
+# Provide parameters {background-color=var(--s3)}
+
+## Overview {.t3}
+
+::: {.box .box-3}
+Connection details
+:::
+
+::: {.box .box-3}
+Which data to fetch
+:::
+
+::: {.box .box-3}
+How program should behave
+:::
+
+
+## Provide Survey Solutions connection details {.t3}
+
+```{r}
+#| label: server connection details
+server      <- "" # provide the complete URL of the server
+workspace   <- "" # use the name that is an ID rather than the display name
+user        <- "" # note: user must be either admin or API user
+password    <- "" # password of the user indicated above
+
+```
+
+## Identify questionnaires whose data to fetch {.t3}
+
+```{r}
+#| label: identify questionnaires
+# provide a string that uniquely identifies the questionnaire. this can be:
+# - full name
+# - sub-string
+# - regular expression
+
+# recall data
+qnr_expr_hbs <- ""
+
+# diary record book data
+qnr_expr_drb <- ""
+```
+
+## Example expressions {.t3}
+
+<!-- :::: {.columns}
+
+::: {.column width="70%"} -->
+
+```{r}
+#| label: questionnaire table
+#| eval: true
+#| echo: false
+qnrs <- tibble::tribble(
+                        ~questionnaireId,   ~version,                        ~title,
+    "2bea5c9c-18f4-46be-a85c-382134306f71",       "1", "ZiHBS 2023 Pilot training V1",
+    "15117ca2-c0a7-4840-a4a0-a69d3cebdea2",       "2",                "ZiHBS 2023 V4",
+    "07a29ec5-0a0f-4b5f-9a7f-45dd591d2514",       "1",      "ZiHBS 2023 Actual Pilot",
+    "15117ca2-c0a7-4840-a4a0-a69d3cebdea2",       "3",                "ZiHBS 2023 V4",
+)
+
+reactable::reactable(
+    data = qnrs,
+    striped = TRUE,
+    defaultColDef = reactable::colDef(
+        minWidth = 100
+    ),
+    columns = list(
+        questionnaireId = reactable::colDef(minWidth =  350),
+        title = reactable::colDef(minWidth = 200)
+    ),
+    theme = df_theme
+)
+```
+
+<!-- :::
+
+::: {.column width="20%"} -->
+
+::: {.panel-tabset}
+
+### Full name 
+
+- `"ZiHBS 2023 Actual Pilot"` -> `"ZiHBS 2023 Actual Pilot"`
+- `"ZiHBS 2023 V4"` -> `"ZiHBS 2023 V4", "ZiHBS 2023 V4"` `r fontawesome::fa(name = "triangle-exclamation")`
+
+### Substring 
+
+- `"Pilot"` -> `"ZiHBS 2023 Pilot training V1", "ZiHBS 2023 Actual Pilot"`
+- `"ZiHBS"` -> everything `r fontawesome::fa(name = "triangle-exclamation")`
+
+### Regex 
+
+`"V[0-9]{1}"` -> `"ZiHBS 2023 Pilot training V1", "ZiHBS 2023 V4", "ZiHBS 2023 V4"` 
+
+:::
+
+<!-- :::
+
+:::: -->
+
+
+## Describe how check issues program should behave {.t3}
+
+The program allows users to specify three types of behavior
+
+1. Which interview statuses to consider
+1. Which issues trigger rejection
+1. Whether to reject interviews automatically
+
+
+## Which interview statuses to consider {.t3}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+```{r}
+# Provide a comma-separated list of interview statuses to review.
+# See status values here: 
+# https://docs.mysurvey.solutions/headquarters/export/system-generated-export-file-anatomy/#coding_status
+#
+# Statuses supported by this script include: 
+# - Completed: 100
+# - ApprovedBySupervisor: 120
+# - ApprovedByHeadquarters: 130
+statuses_to_reject <- c(100, 120)
+```
+:::
+
+::: {.column width="30%"}
+
+- Act as HQ (i.e., handle supervisor-approved interviews only): `statuses_to_reject <- c(100, 120)`
+- Act simultaneously as HQ and all supervisors: `statuses_to_reject <- c(100, 120)`
+- Double-check decisions made by human HQ users: statuses_to_reject <- c(130)
+
+:::
+
+::::
+
+## Which issues trigger rejection {.t3}
+
+```{r}
+# Provide a comma-separated list of issue types to reject
+# {susoreview} uses the following codes:
+# - 1 = Reject
+# - 2 = Comment to post
+# - 3 = Survey Solutions validation error
+# - 4 = Review
+issues_to_reject <- c(1)
+```
+
+## Whether to reject interviews automatically {.t3}
+
+
+```{r}
+# Whether to reject interviews recommended for rejection
+# - If TRUE, the program will instruct the server to reject these interviews.
+# - If FALSE, the program will not.
+# - In either case, the interviews recommended for rejection, 
+# and the reasons why, are saved in `/output/`
+should_reject <- FALSE
+```
