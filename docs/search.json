@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Data management system",
     "section": "",
-    "text": "Topic\nSlides\n\n\n\n\nOverview\ncoming soon \n\n\nInstallation\n  \n\n\nUsage\ncoming soon"
+    "text": "Topic\nSlides\n\n\n\n\nOverview\n  \n\n\nInstallation\n  \n\n\nUsage\ncoming soon"
   },
   {
     "objectID": "slides/01_installation/01_installation.html",
@@ -306,5 +306,12 @@
     "title": "Data management system",
     "section": "Processing",
     "text": "Processing\n\n\n\nChecks \n\n\nRecommends \n\n\nExecutes \n\n\nReports \n\n\nReports on identified issues in two ways. First, by creating files the flagged issues. Second, by generating a report of the top issues, the top reasons for rejection, and the number of rejections."
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html",
+    "href": "slides/01_overview/01_overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Acquisition\n\n\nReporting\n\n\nProcessing\n\n\n\n\n\nAcquisition 📦\n\n\nReporting 🚧\n\n\nProcessing 📦"
   }
 ]

@@ -8,6 +8,6 @@ sidebar: false
 
 | Topic | Slides |
 |-------|--------|
-| Overview | coming soon `r htmltools::div(role = "img", list(fontawesome::fa(name = "person-digging")), style = "color: grey")` |
+| Overview | `r htmltools::a(href = "slides/01_overview/01_overview.qmd", htmltools::div(role = "img", list(fontawesome::fa(name = "person-chalkboard")), style = "color: blue"))` |
 | Installation | `r htmltools::a(href = "slides/02_installation/02_installation.qmd", htmltools::div(role = "img", list(fontawesome::fa(name = "person-chalkboard")), style = "color: blue"))` |
 | Usage | coming soon `r htmltools::div(role = "img", list(fontawesome::fa(name = "person-digging")), style = "color: grey")` |
