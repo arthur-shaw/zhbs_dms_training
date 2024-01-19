@@ -110,5 +110,110 @@
     "title": "Data management system",
     "section": "Whether to reject interviews automatically",
     "text": "Whether to reject interviews automatically\n\n# Whether to reject interviews recommended for rejection\n# - If TRUE, the program will instruct the server to reject these interviews.\n# - If FALSE, the program will not.\n# - In either case, the interviews recommended for rejection, \n# and the reasons why, are saved in `/output/`\nshould_reject &lt;- FALSE"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html",
+    "href": "slides/02_installation/02_installation.html",
+    "title": "Installation",
+    "section": "",
+    "text": "Install dependencies\n\n\nClone repository\n\n\nProvide parameters"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#roadmap",
+    "href": "slides/02_installation/02_installation.html#roadmap",
+    "title": "Data management system",
+    "section": "Roadmap ",
+    "text": "Roadmap \n\nInstall dependencies\n\n\nClone repository\n\n\nProvide parameters"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#overview",
+    "href": "slides/02_installation/02_installation.html#overview",
+    "title": "Data management system",
+    "section": "Overview",
+    "text": "Overview\n\nR\n\n\nRTools\n\n\nRStudio"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#r",
+    "href": "slides/02_installation/02_installation.html#r",
+    "title": "Data management system",
+    "section": "R",
+    "text": "R\n\n\n\n\nVideo\n\n\n\nWhy\nProgram written in R\nHow\n\nFollow this link\nClick on the appropriate link for your OS\nClick on base\nDownload and install (e.g., this for )"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#rtools",
+    "href": "slides/02_installation/02_installation.html#rtools",
+    "title": "Data management system",
+    "section": "RTools",
+    "text": "RTools\n\n\n\n\nVideo\n\n\n\nWhy\nRequired for \nHow\n\nFollow this link\nClick on Windows\nClick on RTools\nDownload\nInstall in the default location (e.g., C:\\rtools43 on Windows)"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#rstudio",
+    "href": "slides/02_installation/02_installation.html#rstudio",
+    "title": "Data management system",
+    "section": "RStudio",
+    "text": "RStudio\n\n\n\n\nVideo\n\n\n\nWhy\nSimplest way to interact with R\nHow\n\nFollow this link\nClick on the DOWNLOAD RSTUDIO\nClick on the appropriate link for your OS\nDownload and install"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#clone",
+    "href": "slides/02_installation/02_installation.html#clone",
+    "title": "Data management system",
+    "section": "Clone",
+    "text": "Clone\n\n\n\n\nVideo\n\n\n\n\nClick on the &lt;&gt; Code button\nClick on Download ZIP to download\nUnzip"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#overview-1",
+    "href": "slides/02_installation/02_installation.html#overview-1",
+    "title": "Data management system",
+    "section": "Overview",
+    "text": "Overview\n\nConnection details\n\n\nWhich data to fetch\n\n\nHow program should behave"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#provide-survey-solutions-connection-details",
+    "href": "slides/02_installation/02_installation.html#provide-survey-solutions-connection-details",
+    "title": "Data management system",
+    "section": "Provide Survey Solutions connection details",
+    "text": "Provide Survey Solutions connection details\n\nserver      &lt;- \"\" # provide the complete URL of the server\nworkspace   &lt;- \"\" # use the name that is an ID rather than the display name\nuser        &lt;- \"\" # note: user must be either admin or API user\npassword    &lt;- \"\" # password of the user indicated above"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#identify-questionnaires-whose-data-to-fetch",
+    "href": "slides/02_installation/02_installation.html#identify-questionnaires-whose-data-to-fetch",
+    "title": "Data management system",
+    "section": "Identify questionnaires whose data to fetch",
+    "text": "Identify questionnaires whose data to fetch\n\n# provide a string that uniquely identifies the questionnaire. this can be:\n# - full name\n# - sub-string\n# - regular expression\n\n# recall data\nqnr_expr_hbs &lt;- \"\"\n\n# diary record book data\nqnr_expr_drb &lt;- \"\""
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#example-expressions",
+    "href": "slides/02_installation/02_installation.html#example-expressions",
+    "title": "Data management system",
+    "section": "Example expressions",
+    "text": "Example expressions\n\n\n\n\n\n\n\n\n\n\nFull nameSubstringRegex\n\n\n\n\"ZiHBS 2023 Actual Pilot\" -&gt; \"ZiHBS 2023 Actual Pilot\"\n\"ZiHBS 2023 V4\" -&gt; \"ZiHBS 2023 V4\", \"ZiHBS 2023 V4\" \n\n\n\n\n\"Pilot\" -&gt; \"ZiHBS 2023 Pilot training V1\", \"ZiHBS 2023 Actual Pilot\"\n\"ZiHBS\" -&gt; everything \n\n\n\n\"V[0-9]{1}\" -&gt; \"ZiHBS 2023 Pilot training V1\", \"ZiHBS 2023 V4\", \"ZiHBS 2023 V4\""
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#describe-how-check-issues-program-should-behave",
+    "href": "slides/02_installation/02_installation.html#describe-how-check-issues-program-should-behave",
+    "title": "Data management system",
+    "section": "Describe how check issues program should behave",
+    "text": "Describe how check issues program should behave\nThe program allows users to specify three types of behavior\n\nWhich interview statuses to consider\nWhich issues trigger rejection\nWhether to reject interviews automatically"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#which-interview-statuses-to-consider",
+    "href": "slides/02_installation/02_installation.html#which-interview-statuses-to-consider",
+    "title": "Data management system",
+    "section": "Which interview statuses to consider",
+    "text": "Which interview statuses to consider\n\n\n\n# Provide a comma-separated list of interview statuses to review.\n# See status values here: \n# https://docs.mysurvey.solutions/headquarters/export/system-generated-export-file-anatomy/#coding_status\n#\n# Statuses supported by this script include: \n# - Completed: 100\n# - ApprovedBySupervisor: 120\n# - ApprovedByHeadquarters: 130\nstatuses_to_reject &lt;- c(100, 120)\n\n\n\nAct as HQ (i.e., handle supervisor-approved interviews only): statuses_to_reject &lt;- c(100, 120)\nAct simultaneously as HQ and all supervisors: statuses_to_reject &lt;- c(100, 120)\nDouble-check decisions made by human HQ users: statuses_to_reject &lt;- c(130)"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#which-issues-trigger-rejection",
+    "href": "slides/02_installation/02_installation.html#which-issues-trigger-rejection",
+    "title": "Data management system",
+    "section": "Which issues trigger rejection",
+    "text": "Which issues trigger rejection\n\n# Provide a comma-separated list of issue types to reject\n# {susoreview} uses the following codes:\n# - 1 = Reject\n# - 2 = Comment to post\n# - 3 = Survey Solutions validation error\n# - 4 = Review\nissues_to_reject &lt;- c(1)"
+  },
+  {
+    "objectID": "slides/02_installation/02_installation.html#whether-to-reject-interviews-automatically",
+    "href": "slides/02_installation/02_installation.html#whether-to-reject-interviews-automatically",
+    "title": "Data management system",
+    "section": "Whether to reject interviews automatically",
+    "text": "Whether to reject interviews automatically\n\n# Whether to reject interviews recommended for rejection\n# - If TRUE, the program will instruct the server to reject these interviews.\n# - If FALSE, the program will not.\n# - In either case, the interviews recommended for rejection, \n# and the reasons why, are saved in `/output/`\nshould_reject &lt;- FALSE"
   }
 ]
