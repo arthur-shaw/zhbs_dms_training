@@ -215,5 +215,96 @@
     "title": "Data management system",
     "section": "Whether to reject interviews automatically",
     "text": "Whether to reject interviews automatically\n\n# Whether to reject interviews recommended for rejection\n# - If TRUE, the program will instruct the server to reject these interviews.\n# - If FALSE, the program will not.\n# - In either case, the interviews recommended for rejection, \n# and the reasons why, are saved in `/output/`\nshould_reject &lt;- FALSE"
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#data-management-systems-scope",
+    "href": "slides/01_overview/01_overview.html#data-management-systems-scope",
+    "title": "Data management system",
+    "section": "Data management system’s scope",
+    "text": "Data management system’s scope\n\nAcquisition\n\n\nReporting\n\n\nProcessing"
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#data-management-systems-status",
+    "href": "slides/01_overview/01_overview.html#data-management-systems-status",
+    "title": "Data management system",
+    "section": "Data management system’s status",
+    "text": "Data management system’s status\n\nAcquisition 📦\n\n\nReporting 🚧\n\n\nProcessing 📦"
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#process",
+    "href": "slides/01_overview/01_overview.html#process",
+    "title": "Data management system",
+    "section": "Process",
+    "text": "Process\n\n\n\nDownloads \n\n\nFor target questionnaire(s):\n\nobtains data for every version (e.g., v1, v2, …, vN)\nunpacks the zip file"
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#process-1",
+    "href": "slides/01_overview/01_overview.html#process-1",
+    "title": "Data management system",
+    "section": "Process",
+    "text": "Process\n\n\n\nDownloads \n\n\nCombines \n\n\nFor each questionnaire, combines data from multiple versions into a single set of data files containing all observations."
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#process-2",
+    "href": "slides/01_overview/01_overview.html#process-2",
+    "title": "Data management system",
+    "section": "Process",
+    "text": "Process\n\n\n\nDownloads \n\n\nCombines \n\n\nConstructs \n\n\nFor certain questionnaires, creates data files in more convenient form than exported (e.g., a single file for food consumption rather than one for each food group)."
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#covers",
+    "href": "slides/01_overview/01_overview.html#covers",
+    "title": "Data management system",
+    "section": "Covers",
+    "text": "Covers\n\nHBS \n\n\nDiary"
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#reports",
+    "href": "slides/01_overview/01_overview.html#reports",
+    "title": "Data management system",
+    "section": "Reports",
+    "text": "Reports\n\n\n\nInventories \n\n\n\n\nVideo\n\n\nInventories the data received by primary sampling unit, flagging cases with data shortfalls"
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#reports-1",
+    "href": "slides/01_overview/01_overview.html#reports-1",
+    "title": "Data management system",
+    "section": "Reports",
+    "text": "Reports\n\n\n\nInventories \n\n\nMonitors \n\n\n\n\n\n\n\nMonitors trends in survey microdata that could undercut key survey indicators"
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#reports-2",
+    "href": "slides/01_overview/01_overview.html#reports-2",
+    "title": "Data management system",
+    "section": "Reports",
+    "text": "Reports\n\n\n\nInventories \n\n\nMonitors \n\n\nAnalyses \n\n\n\nAnalyses trends in survey paradata that could indicate problems (e.g., short interviews, answer changes, etc.). See example here"
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#processing-1",
+    "href": "slides/01_overview/01_overview.html#processing-1",
+    "title": "Data management system",
+    "section": "Processing",
+    "text": "Processing\n\n\n\nChecks \n\n\nChecks for issues in incoming interview data."
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#processing-2",
+    "href": "slides/01_overview/01_overview.html#processing-2",
+    "title": "Data management system",
+    "section": "Processing",
+    "text": "Processing\n\n\n\nChecks \n\n\nRecommends \n\n\nRecommends what to do with each interview: approve, review, reject, discuss with field staff due to persisent problems."
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#processing-3",
+    "href": "slides/01_overview/01_overview.html#processing-3",
+    "title": "Data management system",
+    "section": "Processing",
+    "text": "Processing\n\n\n\nChecks \n\n\nRecommends \n\n\nExecutes \n\n\nExecutes the process for rejection, if desired. This entails:\n\nConstruct rejection message, composed of all issue detected\nPost question-level comments\nReject the interview"
+  },
+  {
+    "objectID": "slides/01_overview/01_overview.html#processing-4",
+    "href": "slides/01_overview/01_overview.html#processing-4",
+    "title": "Data management system",
+    "section": "Processing",
+    "text": "Processing\n\n\n\nChecks \n\n\nRecommends \n\n\nExecutes \n\n\nReports \n\n\nReports on identified issues in two ways. First, by creating files the flagged issues. Second, by generating a report of the top issues, the top reasons for rejection, and the number of rejections."
   }
 ]

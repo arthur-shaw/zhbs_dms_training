@@ -1,0 +1,319 @@
+---
+format: 
+    revealjs:
+        theme: [default, ../css/core.scss, ../css/colors.scss]
+        height: 900
+        width: 1600
+execute: 
+  eval: false
+  echo: true
+---
+
+```{r}
+
+```
+
+# Overview {background-color=var(--suso)}
+
+## Data management system's scope {.suso}
+
+::: {.box .box-1}
+Acquisition
+:::
+
+::: {.box .box-2}
+Reporting
+:::
+
+::: {.box .box-3}
+Processing
+:::
+
+## Data management system's status {.suso}
+
+::: {.box .box-1}
+Acquisition `r emoji::emoji("package")`
+:::
+
+::: {.box .box-2}
+Reporting  `r emoji::emoji("construction")`
+:::
+
+::: {.box .box-3}
+Processing `r emoji::emoji("package")`
+:::
+
+
+# Acquisition {background-color=var(--s1)}
+
+## Process {.t1}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.box .box-1}
+Downloads `r fontawesome::fa(name = "cloud-arrow-down")`
+:::
+
+:::
+
+::: {.column width="50%"}
+
+For target questionnaire(s):
+
+- obtains data for every version (e.g., v1, v2, …, vN)
+- unpacks the zip file
+
+:::
+
+::::
+
+## Process {.t1}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.box .box-1}
+Downloads `r fontawesome::fa(name = "cloud-arrow-down")`
+:::
+
+::: {.box .box-1}
+Combines `r fontawesome::fa(name = "layer-group")`
+:::
+
+:::
+
+::: {.column width="50%"}
+
+For each questionnaire, combines data from multiple versions into a single set of data files containing all observations.
+
+:::
+
+::::
+
+## Process {.t1}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.box .box-1}
+Downloads `r fontawesome::fa(name = "cloud-arrow-down")`
+:::
+
+::: {.box .box-1}
+Combines `r fontawesome::fa(name = "layer-group")`
+:::
+
+::: {.box .box-1}
+Constructs `r fontawesome::fa(name = "trowel-bricks")` 
+:::
+
+:::
+
+::: {.column width="50%"}
+
+For certain questionnaires, creates data files in more convenient form than exported (e.g., a single file for food consumption rather than one for each food group).
+
+:::
+
+::::
+
+## Covers {.t1}
+
+::: {.box .box-1}
+HBS `r fontawesome::fa(name = "clipboard-question")`
+:::
+
+::: {.box .box-1}
+Diary `r fontawesome::fa(name = "file-pen")`
+:::
+
+
+# Reporting {background-color=var(--s2)}
+
+## Reports {.t2}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {.box .box-2}
+Inventories `r fontawesome::fa(name = "list-check")`
+:::
+
+:::
+
+::: {.column width="70%"}
+
+![](assets/complete_by_ea.mp4){fig-align="center"}
+
+Inventories the data received by primary sampling unit, flagging cases with data shortfalls
+
+:::
+
+::::
+
+## Reports {.t2}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {.box .box-2}
+Inventories `r fontawesome::fa(name = "list-check")`
+:::
+
+::: {.box .box-2}
+Monitors `r fontawesome::fa(name = "bars-progress")`
+:::
+
+:::
+
+::: {.column width="70%"}
+
+![](assets/anthro.png){fig-align="center"}
+
+Monitors trends in survey microdata that could undercut key survey indicators
+:::
+
+::::
+
+## Reports {.t2}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {.box .box-2}
+Inventories `r fontawesome::fa(name = "list-check")`
+:::
+
+::: {.box .box-2}
+Monitors `r fontawesome::fa(name = "bars-progress")`
+:::
+
+::: {.box .box-2}
+Analyses `r fontawesome::fa(name = "magnifying-glass-chart")`
+:::
+
+:::
+
+::: {.column width="70%"}
+
+```{=html}
+<iframe width="100%" height="650px" src="https://ardinahasanbasri.github.io/paradata_module_stats/Paradata_Report.html"></iframe>
+```
+
+Analyses trends in survey paradata that could indicate problems (e.g., short interviews, answer changes, etc.). See example [here](https://ardinahasanbasri.github.io/paradata_module_stats/Paradata_Report.html)
+:::
+
+::::
+
+# Processing {background-color=var(--s3)}
+
+## Processing {.t3}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {.box .box-3}
+Checks `r fontawesome::fa(name = "clipboard-check")`
+:::
+
+:::
+
+::: {.column width="70%"}
+Checks for issues in incoming interview data.
+:::
+
+::::
+
+## Processing {.t3}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {.box .box-3}
+Checks `r fontawesome::fa(name = "clipboard-check")`
+:::
+
+::: {.box .box-3}
+Recommends `r fontawesome::fa(name = "comment-dots")`
+:::
+
+:::
+
+::: {.column width="70%"}
+Recommends what to do with each interview: approve, review, reject, discuss with field staff due to persisent problems.
+:::
+
+::::
+
+## Processing {.t3}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {.box .box-3}
+Checks `r fontawesome::fa(name = "clipboard-check")`
+:::
+
+::: {.box .box-3}
+Recommends `r fontawesome::fa(name = "comment-dots")`
+:::
+
+::: {.box .box-3}
+Executes `r fontawesome::fa(name = "laptop-code")`
+:::
+
+:::
+
+::: {.column width="70%"}
+
+Executes the process for rejection, if desired. This entails:
+
+- Construct rejection message, composed of all issue detected
+- Post question-level comments
+- Reject the interview
+
+:::
+
+::::
+
+## Processing {.t3}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {.box .box-3}
+Checks `r fontawesome::fa(name = "clipboard-check")`
+:::
+
+::: {.box .box-3}
+Recommends `r fontawesome::fa(name = "comment-dots")`
+:::
+
+::: {.box .box-3}
+Executes `r fontawesome::fa(name = "laptop-code")`
+:::
+
+::: {.box .box-3}
+Reports `r fontawesome::fa(name = "chart-column")`
+:::
+
+:::
+
+::: {.column width="70%"}
+
+Reports on identified issues in two ways. First, by creating files the flagged issues. Second, by generating a report of the top issues, the top reasons for rejection, and the number of rejections.
+
+:::
+
+::::
