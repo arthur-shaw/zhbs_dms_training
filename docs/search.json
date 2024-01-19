@@ -313,5 +313,110 @@
     "title": "Overview",
     "section": "",
     "text": "Acquisition\n\n\nReporting\n\n\nProcessing\n\n\n\n\n\nAcquisition 📦\n\n\nReporting 🚧\n\n\nProcessing 📦"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#overview-suso",
+    "href": "slides/03_usage/03_usage.html#overview-suso",
+    "title": "Data management system",
+    "section": "Overview {suso}",
+    "text": "Overview {suso}\n\n\n\nOpen the project r fontawesome::fa(name = \"r-project\")\n\n\nRight column"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#overview-suso-1",
+    "href": "slides/03_usage/03_usage.html#overview-suso-1",
+    "title": "Data management system",
+    "section": "Overview {suso}",
+    "text": "Overview {suso}\n\n\nBefore starting\n\nOpen the project r fontawesome::fa(name = \"r-project\")"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#overview-suso-2",
+    "href": "slides/03_usage/03_usage.html#overview-suso-2",
+    "title": "Data management system",
+    "section": "Overview {suso}",
+    "text": "Overview {suso}\n\n\n\nOpen the project r fontawesome::fa(name = \"r-project\")\n\n\n\nCheck recall data r fontawesome::fa(name = \"list-check\")\n\n\nGet diary data r fontawesome::fa(name = \"cloud-arrow-down\")"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#open-the-project-r-fontawesomefaname-r-project",
+    "href": "slides/03_usage/03_usage.html#open-the-project-r-fontawesomefaname-r-project",
+    "title": "Data management system",
+    "section": "Open the project r fontawesome::fa(name = \"r-project\")",
+    "text": "Open the project r fontawesome::fa(name = \"r-project\")"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#check-recall-data-r-fontawesomefaname-list-check",
+    "href": "slides/03_usage/03_usage.html#check-recall-data-r-fontawesomefaname-list-check",
+    "title": "Data management system",
+    "section": "Check recall data r fontawesome::fa(name = \"list-check\")",
+    "text": "Check recall data r fontawesome::fa(name = \"list-check\")"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#get-diary-data-r-fontawesomefaname-cloud-arrow-down",
+    "href": "slides/03_usage/03_usage.html#get-diary-data-r-fontawesomefaname-cloud-arrow-down",
+    "title": "Data management system",
+    "section": "Get diary data r fontawesome::fa(name = \"cloud-arrow-down\")",
+    "text": "Get diary data r fontawesome::fa(name = \"cloud-arrow-down\")"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#overview",
+    "href": "slides/03_usage/03_usage.html#overview",
+    "title": "Data management system",
+    "section": "Overview",
+    "text": "Overview\n\n\nFirst, before starting \n\nOpen the project"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#overview-1",
+    "href": "slides/03_usage/03_usage.html#overview-1",
+    "title": "Data management system",
+    "section": "Overview",
+    "text": "Overview\n\n\nFirst, before starting \n\nOpen the project \n\n\nThen, choose \n\nCheck recall data \n\n\nGet diary data"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#overview-2",
+    "href": "slides/03_usage/03_usage.html#overview-2",
+    "title": "Data management system",
+    "section": "Overview",
+    "text": "Overview\n\n\nFirst, before starting\n\nOpen the project \n\n\nThen, choose \n\nCheck recall data \n\n\nGet diary data"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#method-1-double-click-zhbs_dms.rproj",
+    "href": "slides/03_usage/03_usage.html#method-1-double-click-zhbs_dms.rproj",
+    "title": "Data management system",
+    "section": "Method 1: Double-click zhbs_dms.Rproj",
+    "text": "Method 1: Double-click zhbs_dms.Rproj\n\n\n\n\nVideo\n\n\n\n\nOpen your file explorer\nNavigate to the folder containing zhbs_dms.Rproj\nDouble-click on the file\nWait for RStudio to open the project"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#method-2-open-within-rstudio",
+    "href": "slides/03_usage/03_usage.html#method-2-open-within-rstudio",
+    "title": "Data management system",
+    "section": "Method 2: Open within RStudio",
+    "text": "Method 2: Open within RStudio\n\n\n\n\nVideo\n\n\n\n\nOpen RStudio\nClick on Project: (None) in the upper right-hand corner\nSelect the project, by either\n\n\nSelecting the project from the drop-down menu (if previously opened)\nOpening the project file"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#run-the-script",
+    "href": "slides/03_usage/03_usage.html#run-the-script",
+    "title": "Data management system",
+    "section": "Run the script",
+    "text": "Run the script\n\n\n\n\nVideo\n\n\n\n\nOpen the run_check_issues.R file\n\nMove to the Files tab in RStudio\nClick on run_check_issues.R\n\nSource the run_check_issues.R file\n\nMove to the script editor pane where run_check_issues.R is open\nClick on the Source button in the upper righthand corner\n\nWait for the script to complete"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#review-the-results",
+    "href": "slides/03_usage/03_usage.html#review-the-results",
+    "title": "Data management system",
+    "section": "Review the results",
+    "text": "Review the results\n\n\n\n\nVideo\n\n\n\n\nData: 01_get_data/data/hbs/02_combined/\nOutput: 03_check_issues/output/"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#run-the-script-1",
+    "href": "slides/03_usage/03_usage.html#run-the-script-1",
+    "title": "Data management system",
+    "section": "Run the script",
+    "text": "Run the script\n\n\nTODO: add video\nNOTE: process highly similar to that for recall\n\n\nOpen the get_diary_data.R file\n\nMove to the Files tab in RStudio\nClick on get_diary_data.R\n\nSource the get_diary_data.R file\n\nMove to the script editor pane where get_diary_data.R is open\nClick on the Source button in the upper righthand corner\n\nWait for execution to complete"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#find-the-data",
+    "href": "slides/03_usage/03_usage.html#find-the-data",
+    "title": "Data management system",
+    "section": "Find the data",
+    "text": "Find the data\n\n\nTODO: add video\nNOTE: process is highly similar to that for recall\n\nNavigate to 01_get_data/data/drb/02_combined/"
   }
 ]

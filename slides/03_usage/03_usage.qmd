@@ -1,0 +1,206 @@
+---
+format: 
+    revealjs:
+        theme: [default, ../css/core.scss, ../css/colors.scss]
+        height: 900
+        width: 1600
+execute: 
+  eval: false
+  echo: true
+---
+
+```{r}
+
+```
+
+# Usage `r fontawesome::fa(name = "keyboard")`  {background-color=var(--suso)}
+
+## Overview {.suso}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### [First, before starting `r fontawesome::fa(name = "hand-point-up")`]{.txt-s}
+
+::: {.box .box-1}
+Open the project `r fontawesome::fa(name = "r-project")`
+:::
+
+:::
+
+::: {.column width="50%"}
+
+:::
+
+::::
+
+## Overview {.suso}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### [First, before starting `r fontawesome::fa(name = "hand-point-up")`]{.txt-s}
+
+::: {.box .box-1}
+Open the project `r fontawesome::fa(name = "r-project")`
+:::
+
+:::
+
+::: {.column width="50%"}
+
+### [Then, choose `r fontawesome::fa(name = "signs-post")`]{.txt-s}
+
+::: {.box .box-2}
+Check recall data `r fontawesome::fa(name = "list-check")`
+:::
+
+::: {.box .box-3}
+Get diary data `r fontawesome::fa(name = "cloud-arrow-down")`
+:::
+
+
+:::
+
+::::
+
+
+# Open the project `r fontawesome::fa(name = "r-project")` {background-color=var(--s1)}
+
+## Method 1: Double-click `zhbs_dms.Rproj` {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/open_from_proj_file.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+1.  Open your file explorer
+2.  Navigate to the folder containing `zhbs_dms.Rproj`
+3.  Double-click on the file
+4.  Wait for RStudio to open the project
+
+:::
+
+::::
+
+## Method 2: Open within RStudio {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/open_proj_inside_rstudio.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+1.  Open RStudio
+2.  Click on `Project: (None)` in the upper right-hand corner
+3.  Select the project, by either
+  - Selecting the project from the drop-down menu (if previously opened)
+  - Opening the project file
+
+:::
+
+::::
+
+# Check recall data `r fontawesome::fa(name = "list-check")` {background-color=var(--s2)}
+
+## Run the script {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/run_check_issues.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Open the `run_check_issues.R` file
+  - Move to the `Files` tab in RStudio
+  - Click on `run_check_issues.R`
+- Source the `run_check_issues.R` file
+  - Move to the script editor pane where `run_check_issues.R` is open
+  - Click on the `Source` button in the upper righthand corner
+- Wait for the script to complete
+
+:::
+
+::::
+
+## Review the results {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/find_hbs_results.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Data: `01_get_data/data/hbs/02_combined/`
+- Output: `03_check_issues/output/`
+
+:::
+
+::::
+
+# Get diary data `r fontawesome::fa(name = "cloud-arrow-down")` {background-color=var(--s3)}
+
+## Run the script {.t3}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+TODO: add video
+
+NOTE: process highly similar to that for recall
+
+:::
+
+::: {.column width="30%"}
+
+- Open the `get_diary_data.R` file
+  - Move to the `Files` tab in RStudio
+  - Click on `get_diary_data.R`
+- Source the `get_diary_data.R` file
+  - Move to the script editor pane where `get_diary_data.R` is open
+  - Click on the `Source` button in the upper righthand corner
+- Wait for execution to complete
+
+:::
+
+::::
+
+## Find the data {.t3}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+TODO: add video
+
+NOTE: process is highly similar to that for recall
+
+:::
+
+::: {.column width="30%"}
+
+Navigate to `01_get_data/data/drb/02_combined/`
+
+:::
+
+::::
