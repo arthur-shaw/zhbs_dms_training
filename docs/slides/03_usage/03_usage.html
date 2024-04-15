@@ -673,6 +673,8 @@ Open the <code>run_check_issues.R</code> file
 </section>
 <section id="to-reject" class="slide level2 t2">
 <h2>To reject</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
 <div class="sourceCode" id="cb8" data-code-line-numbers="7-9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>+-- 03_check_issues</span>
 <span id="cb8-2"><a></a>|   \-- output</span>
 <span id="cb8-3"><a></a>|       +-- attributes.dta</span>
@@ -689,9 +691,23 @@ Open the <code>run_check_issues.R</code> file
 <span id="cb8-14"><a></a>|       +-- to_review_issues.dta</span>
 <span id="cb8-15"><a></a>|       +-- to_review_api.dta</span>
 <span id="cb8-16"><a></a>|   +-- R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:30%;">
+<ul>
+<li>Start with <code>to_reject_*</code></li>
+<li>Contain info on cases to reject (automatically)
+<ul>
+<li>At least one major issue found</li>
+<li>No potentially explanatory comments found</li>
+</ul></li>
+<li>Files in Stata and Excel formats</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="to-review" class="slide level2 t2">
 <h2>To review</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
 <div class="sourceCode" id="cb9" data-code-line-numbers="10-12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>+-- 03_check_issues</span>
 <span id="cb9-2"><a></a>|   \-- output</span>
 <span id="cb9-3"><a></a>|       +-- attributes.dta</span>
@@ -708,9 +724,24 @@ Open the <code>run_check_issues.R</code> file
 <span id="cb9-14"><a></a>|       +-- to_review_issues.dta</span>
 <span id="cb9-15"><a></a>|       +-- to_review_api.dta</span>
 <span id="cb9-16"><a></a>|   +-- R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:30%;">
+<ul>
+<li>Start with <code>to_review_*</code></li>
+<li>Contain info on cases to review
+<ul>
+<li>At least one major issue found</li>
+<li>Potentially explanatory comments found at interview or question level</li>
+<li>Need to review manually to decide action</li>
+</ul></li>
+<li>Files in Stata and Excel formats</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="to-follow-up" class="slide level2 t2">
 <h2>To follow up</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
 <div class="sourceCode" id="cb10" data-code-line-numbers="13-15"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>+-- 03_check_issues</span>
 <span id="cb10-2"><a></a>|   \-- output</span>
 <span id="cb10-3"><a></a>|       +-- attributes.dta</span>
@@ -727,6 +758,20 @@ Open the <code>run_check_issues.R</code> file
 <span id="cb10-14"><a></a>|       +-- to_review_issues.dta</span>
 <span id="cb10-15"><a></a>|       +-- to_review_api.dta</span>
 <span id="cb10-16"><a></a>|   +-- R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:30%;">
+<ul>
+<li>Start with <code>to_follow_up_*</code></li>
+<li>Contain info on cases to follow up
+<ul>
+<li>At least one major issue found</li>
+<li>Marked for rejection previously</li>
+<li>No action taken by interviewer to fix issue(s)</li>
+<li>Need to follow up manually</li>
+</ul></li>
+<li>Files in Stata and Excel formats</li>
+</ul>
+</div>
+</div>
 </section></section>
 <section>
 <section id="contents" class="title-slide slide level1 center" data-background-color="var(--s2)">
@@ -749,8 +794,8 @@ Open the <code>run_check_issues.R</code> file
 <h2><code>*_api</code>: What to send the API</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item" id="htmlwidget-cf1b7dae650b9e85c4ec" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-cf1b7dae650b9e85c4ec">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"interview__id":["088418ea-bc04-4499-94ab-af19d875c67d","d7fd0e47-321b-46c8-af2d-459ebda6f644","0686e1b7-97e0-47a1-9947-a5becbf80223","d40c658e-4157-4739-9f5e-bc511f9dc3a4"],"reject_comment":["ERROR: Problem 1\nERROR: Problem 2","ERROR: Problem 1","ERROR: Problem 3\nERROR: Problem 4","ERROR: Problem 5"],"interview__status":[100,120,100,100]},"columns":[{"id":"interview__id","name":"interview__id","type":"character","minWidth":325},{"id":"reject_comment","name":"reject_comment","type":"character","minWidth":200},{"id":"interview__status","name":"interview__status","type":"numeric","minWidth":150}],"striped":true,"theme":{"headerStyle":{"color":"white","background":"var(--s2)"}},"dataKey":"f02ad88bead841409038355c61148c6f"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-c58446ce35d7a3fd2e12" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c58446ce35d7a3fd2e12">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"interview__id":["80c60b2b-c489-4302-86f4-0a78102f742c","b1575893-1e14-40c7-9c3f-a931f85e4947","80416d26-557f-4e7b-b800-2126b6dcd245","a2776c8b-22d9-4768-816e-c06f3325b970"],"reject_comment":["ERROR: Problem 1\nERROR: Problem 2","ERROR: Problem 1","ERROR: Problem 3\nERROR: Problem 4","ERROR: Problem 5"],"interview__status":[100,120,100,100]},"columns":[{"id":"interview__id","name":"interview__id","type":"character","minWidth":325},{"id":"reject_comment","name":"reject_comment","type":"character","minWidth":200},{"id":"interview__status","name":"interview__status","type":"numeric","minWidth":150}],"striped":true,"theme":{"headerStyle":{"color":"white","background":"var(--s2)"}},"dataKey":"307841707e64bc309db384adfba1f10a"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -758,8 +803,8 @@ Open the <code>run_check_issues.R</code> file
 <h2><code>*_issues</code>: What issues found</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item" id="htmlwidget-7e61c03f7cbd7039d710" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-7e61c03f7cbd7039d710">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"interview__id":["088418ea-bc04-4499-94ab-af19d875c67d","088418ea-bc04-4499-94ab-af19d875c67d","d7fd0e47-321b-46c8-af2d-459ebda6f644","0686e1b7-97e0-47a1-9947-a5becbf80223","0686e1b7-97e0-47a1-9947-a5becbf80223","d40c658e-4157-4739-9f5e-bc511f9dc3a4"],"interview__key":["35-42-08-73","35-42-08-73","77-20-13-03","31-30-75-81","31-30-75-81","04-39-19-48"],"interview__status":[100,100,120,100,100,100],"issue_desc":["Problem 1","Problem 2","Problem 1","Problem 3","Problem 4","Problem 5"],"issue_comment":["ERROR: Problem 1","Problem 2","ERROR: Problem 1","ERROR: Problem 3","Problem 4","ERROR: Problem 5"],"issue_loc":["","","","","",""]},"columns":[{"id":"interview__id","name":"interview__id","type":"character","minWidth":325},{"id":"interview__key","name":"interview__key","type":"character","minWidth":125},{"id":"interview__status","name":"interview__status","type":"numeric"},{"id":"issue_desc","name":"issue_desc","type":"character"},{"id":"issue_comment","name":"issue_comment","type":"character","minWidth":200},{"id":"issue_loc","name":"issue_loc","type":"character"}],"striped":true,"theme":{"headerStyle":{"color":"white","background":"var(--s2)"}},"dataKey":"b6dc102f03bcd5e6505fd285e13892d6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-6dd2bebddcb030d25b36" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6dd2bebddcb030d25b36">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"interview__id":["80c60b2b-c489-4302-86f4-0a78102f742c","80c60b2b-c489-4302-86f4-0a78102f742c","b1575893-1e14-40c7-9c3f-a931f85e4947","80416d26-557f-4e7b-b800-2126b6dcd245","80416d26-557f-4e7b-b800-2126b6dcd245","a2776c8b-22d9-4768-816e-c06f3325b970"],"interview__key":["80-42-67-71","80-42-67-71","22-95-88-99","49-11-50-22","49-11-50-22","76-31-97-90"],"interview__status":[100,100,120,100,100,100],"issue_desc":["Problem 1","Problem 2","Problem 1","Problem 3","Problem 4","Problem 5"],"issue_comment":["ERROR: Problem 1","Problem 2","ERROR: Problem 1","ERROR: Problem 3","Problem 4","ERROR: Problem 5"],"issue_loc":["","","","","",""]},"columns":[{"id":"interview__id","name":"interview__id","type":"character","minWidth":325},{"id":"interview__key","name":"interview__key","type":"character","minWidth":125},{"id":"interview__status","name":"interview__status","type":"numeric"},{"id":"issue_desc","name":"issue_desc","type":"character"},{"id":"issue_comment","name":"issue_comment","type":"character","minWidth":200},{"id":"issue_loc","name":"issue_loc","type":"character"}],"striped":true,"theme":{"headerStyle":{"color":"white","background":"var(--s2)"}},"dataKey":"be879a0c584292521221286af9bf193c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -767,8 +812,8 @@ Open the <code>run_check_issues.R</code> file
 <h2><code>*_ids</code>: Which IDs have issues</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item" id="htmlwidget-25dcf4f462150e0a0251" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-25dcf4f462150e0a0251">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"interview__id":["088418ea-bc04-4499-94ab-af19d875c67d","d7fd0e47-321b-46c8-af2d-459ebda6f644","0686e1b7-97e0-47a1-9947-a5becbf80223","d40c658e-4157-4739-9f5e-bc511f9dc3a4"],"interview__key":["35-42-08-73","77-20-13-03","31-30-75-81","04-39-19-48"],"interview__status":[100,120,100,100]},"columns":[{"id":"interview__id","name":"interview__id","type":"character","minWidth":325},{"id":"interview__key","name":"interview__key","type":"character","minWidth":125},{"id":"interview__status","name":"interview__status","type":"numeric","minWidth":150}],"theme":{"headerStyle":{"color":"white","background":"var(--s2)"}},"dataKey":"23821d5bbfdf38152baeefb6354745a5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-49abef22daf571302f7f" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-49abef22daf571302f7f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"interview__id":["80c60b2b-c489-4302-86f4-0a78102f742c","b1575893-1e14-40c7-9c3f-a931f85e4947","80416d26-557f-4e7b-b800-2126b6dcd245","a2776c8b-22d9-4768-816e-c06f3325b970"],"interview__key":["80-42-67-71","22-95-88-99","49-11-50-22","76-31-97-90"],"interview__status":[100,120,100,100]},"columns":[{"id":"interview__id","name":"interview__id","type":"character","minWidth":325},{"id":"interview__key","name":"interview__key","type":"character","minWidth":125},{"id":"interview__status","name":"interview__status","type":"numeric","minWidth":150}],"theme":{"headerStyle":{"color":"white","background":"var(--s2)"}},"dataKey":"2e2ba9e1eea00dffd88a394f9446cc80"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section></section>
@@ -1035,6 +1080,82 @@ Source the <code>get_diary_data.R</code> file
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

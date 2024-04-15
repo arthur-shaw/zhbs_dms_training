@@ -394,6 +394,10 @@ Contents
 
 ## To reject {.t2}
 
+:::: {.columns}
+
+::: {.column width="70%"}
+
 ```{.text code-line-numbers="7-9"}
 +-- 03_check_issues
 |   \-- output
@@ -413,7 +417,25 @@ Contents
 |   +-- R
 ```
 
+:::
+
+::: {.column width="30%"}
+
+- Start with `to_reject_*`
+- Contain info on cases to reject (automatically)
+  - At least one major issue found
+  - No potentially explanatory comments found
+- Files in Stata and Excel formats
+
+:::
+
+::::
+
 ## To review {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
 
 ```{.text code-line-numbers="10-12"}
 +-- 03_check_issues
@@ -434,7 +456,26 @@ Contents
 |   +-- R
 ```
 
+:::
+
+::: {.column width="30%"}
+
+- Start with `to_review_*`
+- Contain info on cases to review
+  - At least one major issue found
+  - Potentially explanatory comments found at interview or question level
+  - Need to review manually to decide action
+- Files in Stata and Excel formats
+
+:::
+
+::::
+
 ## To follow up {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
 
 ```{.text code-line-numbers="13-15"}
 +-- 03_check_issues
@@ -454,6 +495,22 @@ Contents
 |       +-- to_review_api.dta
 |   +-- R
 ```
+
+:::
+
+::: {.column width="30%"}
+
+- Start with `to_follow_up_*`
+- Contain info on cases to follow up
+  - At least one major issue found
+  - Marked for rejection previously
+  - No action taken by interviewer to fix issue(s)
+  - Need to follow up manually
+- Files in Stata and Excel formats
+
+:::
+
+::::
 
 # Contents {background-color=var(--s2)}
 

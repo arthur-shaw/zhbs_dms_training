@@ -459,21 +459,21 @@
     "href": "slides/03_usage/03_usage.html#to-reject",
     "title": "Data management system",
     "section": "To reject",
-    "text": "To reject\n+-- 03_check_issues\n|   \\-- output\n|       +-- attributes.dta\n|       +-- attributes.xlsx\n|       +-- issues.dta\n|       +-- issues.xlsx\n|       +-- to_reject_ids.dta\n|       +-- to_reject_issues.dta\n|       +-- to_reject_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|   +-- R"
+    "text": "To reject\n\n\n+-- 03_check_issues\n|   \\-- output\n|       +-- attributes.dta\n|       +-- attributes.xlsx\n|       +-- issues.dta\n|       +-- issues.xlsx\n|       +-- to_reject_ids.dta\n|       +-- to_reject_issues.dta\n|       +-- to_reject_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|   +-- R\n\n\nStart with to_reject_*\nContain info on cases to reject (automatically)\n\nAt least one major issue found\nNo potentially explanatory comments found\n\nFiles in Stata and Excel formats"
   },
   {
     "objectID": "slides/03_usage/03_usage.html#to-review",
     "href": "slides/03_usage/03_usage.html#to-review",
     "title": "Data management system",
     "section": "To review",
-    "text": "To review\n+-- 03_check_issues\n|   \\-- output\n|       +-- attributes.dta\n|       +-- attributes.xlsx\n|       +-- issues.dta\n|       +-- issues.xlsx\n|       +-- to_reject_ids.dta\n|       +-- to_reject_issues.dta\n|       +-- to_reject_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|   +-- R"
+    "text": "To review\n\n\n+-- 03_check_issues\n|   \\-- output\n|       +-- attributes.dta\n|       +-- attributes.xlsx\n|       +-- issues.dta\n|       +-- issues.xlsx\n|       +-- to_reject_ids.dta\n|       +-- to_reject_issues.dta\n|       +-- to_reject_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|   +-- R\n\n\nStart with to_review_*\nContain info on cases to review\n\nAt least one major issue found\nPotentially explanatory comments found at interview or question level\nNeed to review manually to decide action\n\nFiles in Stata and Excel formats"
   },
   {
     "objectID": "slides/03_usage/03_usage.html#to-follow-up",
     "href": "slides/03_usage/03_usage.html#to-follow-up",
     "title": "Data management system",
     "section": "To follow up",
-    "text": "To follow up\n+-- 03_check_issues\n|   \\-- output\n|       +-- attributes.dta\n|       +-- attributes.xlsx\n|       +-- issues.dta\n|       +-- issues.xlsx\n|       +-- to_reject_ids.dta\n|       +-- to_reject_issues.dta\n|       +-- to_reject_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|   +-- R"
+    "text": "To follow up\n\n\n+-- 03_check_issues\n|   \\-- output\n|       +-- attributes.dta\n|       +-- attributes.xlsx\n|       +-- issues.dta\n|       +-- issues.xlsx\n|       +-- to_reject_ids.dta\n|       +-- to_reject_issues.dta\n|       +-- to_reject_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|   +-- R\n\n\nStart with to_follow_up_*\nContain info on cases to follow up\n\nAt least one major issue found\nMarked for rejection previously\nNo action taken by interviewer to fix issue(s)\nNeed to follow up manually\n\nFiles in Stata and Excel formats"
   },
   {
     "objectID": "slides/03_usage/03_usage.html#three-types-of-files",
