@@ -6,11 +6,79 @@ format:
         width: 1600
 execute: 
   eval: false
-  echo: true
+  echo: false
 ---
 
 ```{r}
 
+```
+
+```{r}
+#| label: define reactable theme
+#| eval: true
+#| echo: false
+s2_theme = reactable::reactableTheme(
+    headerStyle = list(
+        color = "white",
+        background = "var(--s2)"
+    )
+) 
+```
+
+```{r}
+#| label: define functions for creating interview__key
+#| eval: true
+#| echo: false
+
+#' Add leading zero to 2-digit number
+#' 
+#' @param x Numeric. Two-digit number to give padding
+#' 
+#' @importFrom stringr str_pad
+pad_num <- function(x) {
+    stringr::str_pad(
+        string = x,
+        width = 2,
+        pad = 0
+    )
+}
+
+#' Create valid, fake `interview__key`
+#' 
+#' @return Character. Valid, fake `interview__id` of form XX-XX-XX-XX
+#' @importFrom glue glue
+create_key <- function() {
+
+    # draw 4 random integers between 0 and 99
+    nums <- sample(
+        x = 0:99,
+        size = 4,
+        replace = TRUE
+    )
+    
+    # construct key like XX-XX-XX-XX, where XX is a number with leading zero
+    key <- glue::glue("{pad_num(nums[1])}-{pad_num(nums[2])}-{pad_num(nums[3])}-{pad_num(nums[4])}")
+
+    return(key)
+
+}
+
+#' Create N valid, fake `interview__key` values
+#' 
+#' @param n Numeric. Number of `interview__key` values to return
+#' 
+#' @return Character vector. Composed of valid `interview__key` values.
+#' 
+#' @importFrom purrr map_chr
+create_keys <- function(n) {
+
+    purrr::map_chr(
+        .x = seq(1, n),
+        .f = ~ create_key()
+    )
+
+}
+ 
 ```
 
 # Usage `r fontawesome::fa(name = "keyboard")`  {background-color=var(--suso)}
@@ -126,12 +194,16 @@ Get diary data `r fontawesome::fa(name = "cloud-arrow-down")`
 
 ::: {.column width="30%"}
 
-- Open the `run_check_issues.R` file
+- <details>
+  <summary>Open the `run_check_issues.R` file</summary>
   - Move to the `Files` tab in RStudio
   - Click on `run_check_issues.R`
-- Source the `run_check_issues.R` file
+</details>
+- <details>
+  <summary>Open the `run_check_issues.R` file</summary>
   - Move to the script editor pane where `run_check_issues.R` is open
   - Click on the `Source` button in the upper righthand corner
+</details>
 - Wait for the script to complete
 
 :::
@@ -157,6 +229,367 @@ Get diary data `r fontawesome::fa(name = "cloud-arrow-down")`
 
 ::::
 
+## Understanding data {.t2}
+
+
+```{.text echo=true}
+├── 00_resource
+├── 01_downloaded
+├── 02_combined
+└── 03_derived
+```
+
+## Understanding data {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```{.text code-line-numbers="1"}
+├── 00_resource
+├── 01_downloaded
+├── 02_combined
+└── 03_derived
+```
+
+:::
+
+::: {.column width="30%"}
+
+- **Resource.** Auxiliary data for checks (e.g., conversion factors).
+
+:::
+
+::::
+
+## Understanding data {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```{.text code-line-numbers="2"}
+├── 00_resource
+├── 01_downloaded
+├── 02_combined
+└── 03_derived
+```
+
+:::
+
+::: {.column width="30%"}
+
+- **Resource.** Auxiliary data for checks (e.g., conversion factors).
+- **Downloaded.** One per CAPI version: zip file and folder of unzipped data files.
+
+:::
+
+::::
+
+## Understanding data {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```{.text code-line-numbers="3"}
+├── 00_resource
+├── 01_downloaded
+├── 02_combined
+└── 03_derived
+```
+
+:::
+
+::: {.column width="30%"}
+
+- **Resource.** Auxiliary data for checks (e.g., conversion factors).
+- **Downloaded.** One per CAPI version: zip file and folder of unzipped data files.
+- **Combined.** One set of files that "concatenates" data from all CAPI versions.
+
+:::
+
+::::
+
+## Understanding data {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```{.text code-line-numbers="4"}
+├── 00_resource
+├── 01_downloaded
+├── 02_combined
+└── 03_derived
+```
+
+:::
+
+::: {.column width="30%"}
+
+- **Resource.** Auxiliary data for checks (e.g., conversion factors).
+- **Downloaded.** One per CAPI version: zip file and folder of unzipped data files.
+- **Combined.** One set of files that "concatenates" data from all CAPI versions.
+- **Constructed.** Rosters split in CAPI are combined in data. Var names harmonized.
+
+:::
+
+::::
+
+## Understanding output {.t2}
+
+::: {.box .box-2}
+Folder
+:::
+
+::: {.box .box-2}
+Files
+:::
+
+::: {.box .box-2}
+Contents
+:::
+
+# Folder {background-color=var(--s2)}
+
+## How to get there {.t2}
+
+```{.text code-line-numbers="3"}
++-- 01_get_data
++-- 03_check_issues
+|   +-- output
+|   +-- R
++-- get_diary_data.R
++-- R
++-- README.md
++-- README.Rmd
++-- run_check_issues.R
++-- setup.R
+\-- zhbs_dms.Rproj
+```
+
+# Files {background-color=var(--s2)}
+
+## What's there {.t2}
+
+```{.text code-line-numbers="3-15"}
++-- 03_check_issues
+|   \-- output
+|       +-- attributes.dta
+|       +-- attributes.xlsx
+|       +-- issues.dta
+|       +-- issues.xlsx
+|       +-- to_reject_ids.dta
+|       +-- to_reject_issues.dta
+|       +-- to_reject_api.dta
+|       +-- to_review_ids.dta
+|       +-- to_review_issues.dta
+|       +-- to_review_api.dta
+|       +-- to_review_ids.dta
+|       +-- to_review_issues.dta
+|       +-- to_review_api.dta
+|   +-- R
+```
+
+## To reject {.t2}
+
+```{.text code-line-numbers="7-9"}
++-- 03_check_issues
+|   \-- output
+|       +-- attributes.dta
+|       +-- attributes.xlsx
+|       +-- issues.dta
+|       +-- issues.xlsx
+|       +-- to_reject_ids.dta
+|       +-- to_reject_issues.dta
+|       +-- to_reject_api.dta
+|       +-- to_review_ids.dta
+|       +-- to_review_issues.dta
+|       +-- to_review_api.dta
+|       +-- to_review_ids.dta
+|       +-- to_review_issues.dta
+|       +-- to_review_api.dta
+|   +-- R
+```
+
+## To review {.t2}
+
+```{.text code-line-numbers="10-12"}
++-- 03_check_issues
+|   \-- output
+|       +-- attributes.dta
+|       +-- attributes.xlsx
+|       +-- issues.dta
+|       +-- issues.xlsx
+|       +-- to_reject_ids.dta
+|       +-- to_reject_issues.dta
+|       +-- to_reject_api.dta
+|       +-- to_review_ids.dta
+|       +-- to_review_issues.dta
+|       +-- to_review_api.dta
+|       +-- to_review_ids.dta
+|       +-- to_review_issues.dta
+|       +-- to_review_api.dta
+|   +-- R
+```
+
+## To follow up {.t2}
+
+```{.text code-line-numbers="13-15"}
++-- 03_check_issues
+|   \-- output
+|       +-- attributes.dta
+|       +-- attributes.xlsx
+|       +-- issues.dta
+|       +-- issues.xlsx
+|       +-- to_reject_ids.dta
+|       +-- to_reject_issues.dta
+|       +-- to_reject_api.dta
+|       +-- to_review_ids.dta
+|       +-- to_review_issues.dta
+|       +-- to_review_api.dta
+|       +-- to_review_ids.dta
+|       +-- to_review_issues.dta
+|       +-- to_review_api.dta
+|   +-- R
+```
+
+# Contents {background-color=var(--s2)}
+
+## Three types of files {.t2}
+
+::: {.box .box-2}
+`*_api`
+:::
+
+::: {.box .box-2}
+`*_issues`
+:::
+
+::: {.box .box-2}
+`*_ids`
+:::
+
+## `*_api`: What to send the API {.t2}
+
+```{r}
+#| label: API files
+#| eval: true
+#| echo: false
+df_api <- data.frame(
+  interview__id = uuid::UUIDgenerate(n = 4),
+  reject_comment = c(
+    "ERROR: Problem 1\nERROR: Problem 2",
+    "ERROR: Problem 1",
+    "ERROR: Problem 3\nERROR: Problem 4",
+    "ERROR: Problem 5"
+  ),
+  interview__status = c(100, 120, 100, 100)
+)
+
+api_tbl <- reactable::reactable(
+  data = df_api,
+  striped = TRUE,
+  columns = list(
+    interview__id = reactable::colDef(minWidth = 325),
+    reject_comment = reactable::colDef(minWidth = 200),
+    interview__status = reactable::colDef(minWidth = 150)
+  ),
+  theme = s2_theme
+)
+
+api_tbl
+```
+
+## `*_issues`: What issues found {.t2}
+
+```{r}
+#| label: issues files
+#| eval: true
+#| echo: false
+df_issues <- df_api |>
+  dplyr::mutate(
+    interview__key = create_keys(n = 4),
+    issue_type = 1,
+    issue_comment = reject_comment,
+    issue_loc = ""
+  ) |>
+  tidyr::separate_longer_delim(
+    cols = issue_comment,
+    delim = stringr::regex(pattern = "\\nERROR")
+  ) |>
+  dplyr::mutate(
+    issue_desc = stringr::str_remove(
+      string = issue_comment,
+      pattern = stringr::fixed("ERROR: ")
+    ),
+    issue_vars = dplyr::case_when(
+      issue_desc == "Problem 2" ~ "v2a",
+      issue_desc == "Problem 1" ~ "v1",
+      issue_desc == "Problem 3" ~ "v23",
+      issue_desc == "Problem 3" ~ "v1[0-2]",
+      TRUE ~ ""
+    ),
+    dplyr::across(
+      .cols = c(issue_desc, issue_comment),
+      .fns = ~ stringr::str_replace(
+        string = .x,
+        pattern = "(?<!ERROR): ",
+        replacement = ""
+      )
+    )
+  ) |>
+  dplyr::select(
+    interview__id, interview__key, interview__status,
+    issue_desc, issue_comment, issue_loc
+  )
+
+issues_tbl <- reactable::reactable(
+  data = df_issues,
+  striped = TRUE,
+  columns = list(
+    interview__id = reactable::colDef(minWidth = 325),
+    interview__key = reactable::colDef(minWidth = 125),
+    # interview__status = reactable::colDef(minWidth = 50),
+    # issue_desc = reactable::colDef(minWidth = 100),
+    issue_comment = reactable::colDef(minWidth = 200)
+    # issue_loc = reactable::colDef(minWidth = 50)
+  ),
+  theme = s2_theme
+)
+
+issues_tbl
+```
+
+## `*_ids`: Which IDs have issues {.t2}
+
+```{r}
+#| label: ids
+#| eval: true
+#| echo: false
+df_ids <- df_api |>
+  dplyr::mutate(
+    interview__id = create_keys(n = 4)
+  )
+
+df_ids <- df_issues |>
+  dplyr::distinct(interview__id, .keep_all = TRUE) |>
+  dplyr::select(interview__id, interview__key, interview__status)
+
+ids_tbl <- reactable::reactable(
+  data = df_ids,
+  columns = list(
+    interview__id = reactable::colDef(minWidth = 325),
+    interview__key = reactable::colDef(minWidth = 125),
+    interview__status = reactable::colDef(minWidth = 150)
+  ),
+  theme = s2_theme
+)
+
+ids_tbl
+```
+
 # Get diary data `r fontawesome::fa(name = "cloud-arrow-down")` {background-color=var(--s3)}
 
 ## Run the script {.t3}
@@ -171,14 +604,18 @@ NOTE: process highly similar to that for recall
 
 :::
 
-::: {.column width="30%"}
+::: {.column width="30%" .scrollable}
 
-- Open the `get_diary_data.R` file
+- <details>
+  <summary>Open the `get_diary_data.R` file</summary>
   - Move to the `Files` tab in RStudio
   - Click on `get_diary_data.R`
-- Source the `get_diary_data.R` file
+</details>
+- <details>
+  <summary>Source the `get_diary_data.R` file</summary>
   - Move to the script editor pane where `get_diary_data.R` is open
   - Click on the `Source` button in the upper righthand corner
+</details>
 - Wait for execution to complete
 
 :::

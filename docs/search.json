@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Data management system",
     "section": "",
-    "text": "Topic\nSlides\n\n\n\n\nOverview\n  \n\n\nInstallation\n  \n\n\nUsage\ncoming soon"
+    "text": "Topic\nSlides\n\n\n\n\nOverview\n  \n\n\nInstallation\n  \n\n\nUsage"
   },
   {
     "objectID": "slides/01_installation/01_installation.html",
@@ -396,7 +396,7 @@
     "href": "slides/03_usage/03_usage.html#run-the-script",
     "title": "Data management system",
     "section": "Run the script",
-    "text": "Run the script\n\n\n\n\nVideo\n\n\n\n\nOpen the run_check_issues.R file\n\nMove to the Files tab in RStudio\nClick on run_check_issues.R\n\nSource the run_check_issues.R file\n\nMove to the script editor pane where run_check_issues.R is open\nClick on the Source button in the upper righthand corner\n\nWait for the script to complete"
+    "text": "Run the script\n\n\n\n\nVideo\n\n\n\n\n\n\nOpen the run_check_issues.R file\n\n\nMove to the Files tab in RStudio\nClick on run_check_issues.R\n\n\n\n\nOpen the run_check_issues.R file\n\n\nMove to the script editor pane where run_check_issues.R is open\nClick on the Source button in the upper righthand corner\n\n\nWait for the script to complete"
   },
   {
     "objectID": "slides/03_usage/03_usage.html#review-the-results",
@@ -410,7 +410,7 @@
     "href": "slides/03_usage/03_usage.html#run-the-script-1",
     "title": "Data management system",
     "section": "Run the script",
-    "text": "Run the script\n\n\nTODO: add video\nNOTE: process highly similar to that for recall\n\n\nOpen the get_diary_data.R file\n\nMove to the Files tab in RStudio\nClick on get_diary_data.R\n\nSource the get_diary_data.R file\n\nMove to the script editor pane where get_diary_data.R is open\nClick on the Source button in the upper righthand corner\n\nWait for execution to complete"
+    "text": "Run the script\n\n\nTODO: add video\nNOTE: process highly similar to that for recall\n\n\n\n\nOpen the get_diary_data.R file\n\n\nMove to the Files tab in RStudio\nClick on get_diary_data.R\n\n\n\n\nSource the get_diary_data.R file\n\n\nMove to the script editor pane where get_diary_data.R is open\nClick on the Source button in the upper righthand corner\n\n\nWait for execution to complete"
   },
   {
     "objectID": "slides/03_usage/03_usage.html#find-the-data",
@@ -418,5 +418,138 @@
     "title": "Data management system",
     "section": "Find the data",
     "text": "Find the data\n\n\nTODO: add video\nNOTE: process is highly similar to that for recall\n\nNavigate to 01_get_data/data/drb/02_combined/"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#understanding-data",
+    "href": "slides/03_usage/03_usage.html#understanding-data",
+    "title": "Data management system",
+    "section": "Understanding data",
+    "text": "Understanding data\n├── 00_resource\n├── 01_downloaded\n├── 02_combined\n└── 03_derived"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#understanding-output",
+    "href": "slides/03_usage/03_usage.html#understanding-output",
+    "title": "Data management system",
+    "section": "Understanding output",
+    "text": "Understanding output\n\nFolder\n\n\nFiles\n\n\nContents"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#understanding-data-1",
+    "href": "slides/03_usage/03_usage.html#understanding-data-1",
+    "title": "Data management system",
+    "section": "Understanding data",
+    "text": "Understanding data\n\n\n├── 00_resource\n├── 01_downloaded\n├── 02_combined\n└── 03_derived\n\n\nResource. Auxiliary data for checks (e.g., conversion factors)."
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#how-to-get-there",
+    "href": "slides/03_usage/03_usage.html#how-to-get-there",
+    "title": "Data management system",
+    "section": "How to get there",
+    "text": "How to get there\n+-- 01_get_data\n+-- 03_check_issues\n|   +-- output\n|   +-- R\n+-- get_diary_data.R\n+-- R\n+-- README.md\n+-- README.Rmd\n+-- run_check_issues.R\n+-- setup.R\n\\-- zhbs_dms.Rproj"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#whats-there",
+    "href": "slides/03_usage/03_usage.html#whats-there",
+    "title": "Data management system",
+    "section": "What’s there",
+    "text": "What’s there\n+-- 03_check_issues\n|   \\-- output\n|       +-- attributes.dta\n|       +-- attributes.xlsx\n|       +-- issues.dta\n|       +-- issues.xlsx\n|       +-- to_reject_ids.dta\n|       +-- to_reject_issues.dta\n|       +-- to_reject_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|   +-- R"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#to-reject",
+    "href": "slides/03_usage/03_usage.html#to-reject",
+    "title": "Data management system",
+    "section": "To reject",
+    "text": "To reject\n+-- 03_check_issues\n|   \\-- output\n|       +-- attributes.dta\n|       +-- attributes.xlsx\n|       +-- issues.dta\n|       +-- issues.xlsx\n|       +-- to_reject_ids.dta\n|       +-- to_reject_issues.dta\n|       +-- to_reject_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|   +-- R"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#to-review",
+    "href": "slides/03_usage/03_usage.html#to-review",
+    "title": "Data management system",
+    "section": "To review",
+    "text": "To review\n+-- 03_check_issues\n|   \\-- output\n|       +-- attributes.dta\n|       +-- attributes.xlsx\n|       +-- issues.dta\n|       +-- issues.xlsx\n|       +-- to_reject_ids.dta\n|       +-- to_reject_issues.dta\n|       +-- to_reject_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|   +-- R"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#to-follow-up",
+    "href": "slides/03_usage/03_usage.html#to-follow-up",
+    "title": "Data management system",
+    "section": "To follow up",
+    "text": "To follow up\n+-- 03_check_issues\n|   \\-- output\n|       +-- attributes.dta\n|       +-- attributes.xlsx\n|       +-- issues.dta\n|       +-- issues.xlsx\n|       +-- to_reject_ids.dta\n|       +-- to_reject_issues.dta\n|       +-- to_reject_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|       +-- to_review_ids.dta\n|       +-- to_review_issues.dta\n|       +-- to_review_api.dta\n|   +-- R"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#three-types-of-files",
+    "href": "slides/03_usage/03_usage.html#three-types-of-files",
+    "title": "Data management system",
+    "section": "Three types of files",
+    "text": "Three types of files\n\n*_api\n\n\n*_issues\n\n\n*_ids"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#api-what-to-send-the-api",
+    "href": "slides/03_usage/03_usage.html#api-what-to-send-the-api",
+    "title": "Data management system",
+    "section": "*_api: What to send the API",
+    "text": "*_api: What to send the API"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#issues-what-issues-found",
+    "href": "slides/03_usage/03_usage.html#issues-what-issues-found",
+    "title": "Data management system",
+    "section": "*_issues: What issues found",
+    "text": "*_issues: What issues found"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#ids-which-ids-have-issues",
+    "href": "slides/03_usage/03_usage.html#ids-which-ids-have-issues",
+    "title": "Data management system",
+    "section": "*_ids: Which IDs have issues",
+    "text": "*_ids: Which IDs have issues"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#contents",
+    "href": "slides/03_usage/03_usage.html#contents",
+    "title": "Data management system",
+    "section": "Contents",
+    "text": "Contents"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#understanding-data-2",
+    "href": "slides/03_usage/03_usage.html#understanding-data-2",
+    "title": "Data management system",
+    "section": "Understanding data",
+    "text": "Understanding data\n\n\n├── 00_resource\n├── 01_downloaded\n├── 02_combined\n└── 03_derived\n\n\nResource. Auxiliary data for checks (e.g., conversion factors).\nDownloaded. One per CAPI version: zip file and folder of unzipped data files."
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#understanding-data-3",
+    "href": "slides/03_usage/03_usage.html#understanding-data-3",
+    "title": "Data management system",
+    "section": "Understanding data",
+    "text": "Understanding data\n\n\n├── 00_resource\n├── 01_downloaded\n├── 02_combined\n└── 03_derived\n\n\nResource. Auxiliary data for checks (e.g., conversion factors).\nDownloaded. One per CAPI version: zip file and folder of unzipped data files.\nCombined. One set of files that “concatenates” data from all CAPI versions."
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#api-what-to-send-the-api-.t2",
+    "href": "slides/03_usage/03_usage.html#api-what-to-send-the-api-.t2",
+    "title": "Data management system",
+    "section": "*_api: What to send the API {.t2}",
+    "text": "*_api: What to send the API {.t2}"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#understanding-data-4",
+    "href": "slides/03_usage/03_usage.html#understanding-data-4",
+    "title": "Data management system",
+    "section": "Understanding data",
+    "text": "Understanding data\n\n\n├── 00_resource\n├── 01_downloaded\n├── 02_combined\n└── 03_derived\n\n\nResource. Auxiliary data for checks (e.g., conversion factors).\nDownloaded. One per CAPI version: zip file and folder of unzipped data files.\nCombined. One set of files that “concatenates” data from all CAPI versions.\nConstructed. Rosters split in CAPI are combined in data. Var names harmonized."
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html",
+    "href": "slides/03_usage/03_usage.html",
+    "title": "Usage ",
+    "section": "",
+    "text": "Open the project \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOpen the project \n\n\n\n\n\n\nCheck recall data \n\n\nGet diary data"
+  },
+  {
+    "objectID": "slides/03_usage/03_usage.html#contents-1",
+    "href": "slides/03_usage/03_usage.html#contents-1",
+    "title": "Data management system",
+    "section": "Contents",
+    "text": "Contents"
   }
 ]
